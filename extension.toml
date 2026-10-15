@@ -1,0 +1,176 @@
+id = "perry"
+name = "Perry"
+version = "0.1.0"
+schema_version = 1
+description = "Clojure interactive development and nREPL support for Zed"
+repository = "https://github.com/zed-industries/zed"
+authors = ["Zed Industries <hi@zed.dev>"]
+
+events = [
+    "active-editor-changed",
+    "buffer-saved",
+    "selection-changed"
+]
+
+[commands.jack-in]
+title = "Perry: Jack-In (Start & Connect nREPL Server)"
+
+[commands.load-file]
+title = "Perry: Load Current File into REPL"
+
+[commands.switch-ns]
+title = "Perry: Switch REPL to File Namespace"
+
+[commands.run-ns-tests]
+title = "Perry: Run Namespace Tests"
+
+[commands.run-test-at-cursor]
+title = "Perry: Run Test at Cursor"
+
+[commands.run-all-tests]
+title = "Perry: Run All Tests"
+
+[commands.rerun-failed-tests]
+title = "Perry: Rerun Failed Tests"
+
+[commands.clear-test-markers]
+title = "Perry: Clear Test Markers"
+
+[commands.show-doc]
+title = "Perry: Show Documentation (Info)"
+
+[commands.paredit-slurp-forward]
+title = "Perry: Paredit Slurp Forward"
+
+[commands.paredit-barf-forward]
+title = "Perry: Paredit Barf Forward"
+
+[commands.paredit-slurp-backward]
+title = "Perry: Paredit Slurp Backward"
+
+[commands.paredit-barf-backward]
+title = "Perry: Paredit Barf Backward"
+
+[commands.paredit-raise]
+title = "Perry: Paredit Raise"
+
+[commands.paredit-splice]
+title = "Perry: Paredit Splice S-expression"
+
+[commands.paredit-wrap-round]
+title = "Perry: Paredit Wrap Round ()"
+
+[commands.paredit-wrap-square]
+title = "Perry: Paredit Wrap Square []"
+
+[commands.paredit-wrap-curly]
+title = "Perry: Paredit Wrap Curly {}"
+
+[commands.paredit-wrap-quote]
+title = "Perry: Paredit Wrap Quotes \"\""
+
+[commands.paredit-split]
+title = "Perry: Paredit Split S-expression"
+
+[commands.paredit-join]
+title = "Perry: Paredit Join S-expressions"
+
+[commands.paredit-splice-killing-forward]
+title = "Perry: Paredit Splice Killing Forward"
+
+[commands.paredit-splice-killing-backward]
+title = "Perry: Paredit Splice Killing Backward"
+
+[commands.paredit-kill]
+title = "Perry: Paredit Kill"
+
+[commands.paredit-kill-sexp]
+title = "Perry: Paredit Kill S-expression"
+
+[commands.paredit-close-and-newline]
+title = "Perry: Paredit Close Delimiter and Newline"
+
+[commands.paredit-move-forward]
+title = "Perry: Paredit Move Forward"
+
+[commands.paredit-move-backward]
+title = "Perry: Paredit Move Backward"
+
+[commands.paredit-move-up]
+title = "Perry: Paredit Move Forward Up"
+
+[commands.paredit-move-down]
+title = "Perry: Paredit Move Forward Down"
+
+[commands.paredit-move-forward-down]
+title = "Perry: Paredit Move Forward Down"
+
+[commands.paredit-move-backward-down]
+title = "Perry: Paredit Move Backward Down"
+
+[commands.paredit-move-forward-up]
+title = "Perry: Paredit Move Forward Up"
+
+[commands.paredit-move-backward-up]
+title = "Perry: Paredit Move Backward Up"
+
+[commands.paredit-thread-first]
+title = "Perry: Paredit Thread First (->)"
+
+[commands.paredit-thread-last]
+title = "Perry: Paredit Thread Last (->>)"
+
+[commands.paredit-unthread]
+title = "Perry: Paredit Unthread"
+
+[commands.paredit-cycle-collection]
+title = "Perry: Paredit Cycle Collection Type"
+
+[commands.paredit-move-form-up]
+title = "Perry: Paredit Move Form Up"
+
+[commands.paredit-move-form-down]
+title = "Perry: Paredit Move Form Down"
+
+[commands.paredit-balanced-backspace]
+title = "Perry: Paredit Balanced Backspace"
+
+[commands.paredit-balanced-delete]
+title = "Perry: Paredit Balanced Delete"
+
+[commands.paredit-close-delimiter]
+title = "Perry: Paredit Close Delimiter"
+
+[commands.paredit-insert-quote]
+title = "Perry: Paredit Insert Double Quote"
+
+[commands.paredit-comment-shunting]
+title = "Perry: Paredit Comment Shunting"
+
+[[capabilities]]
+kind = "network:tcp-local"
+host = "127.0.0.1"
+
+[[capabilities]]
+kind = "network:tcp-local"
+host = "localhost"
+
+[[capabilities]]
+kind = "process:exec"
+command = "clojure"
+args = ["**"]
+
+[[capabilities]]
+kind = "process:exec"
+command = "lein"
+args = ["**"]
+
+[[capabilities]]
+kind = "process:exec"
+command = "bb"
+args = ["**"]
+
+[[capabilities]]
+kind = "process:exec"
+command = "npx"
+args = ["**"]
